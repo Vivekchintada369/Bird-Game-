@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: skyblue;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'), linear-gradient(to bottom, skyblue, #87CEEB); /* Clouds */
+}
+
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+#bird {
+    position: absolute;
+    width: 34px;
+    height: 24px;
+    background-color: black; /* Default bird color */
+    top: 200px;
+    left: 50px;
+    z-index: 10; /* Ensure the bird is visible */
+    transition: top 0.1s ease; /* Smooth transition */
+}
+
+.pipe {
+    position: absolute;
+    width: 50px;
+    background-color: green;
+    top: 0;
+}
+
+#options-popup, #game-over-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+    border: 2px solid #888; /* Dark gray border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    text-align: center;
+}
+
+#options-popup h2, #options-popup button, #options-popup label, #options-popup input,
+#game-over-popup h2, #game-over-popup p, #game-over-popup button, #game-over-popup p#high-score-display {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#options-popup {
+    width: 400px;
+}
+
+#shape-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#shape-options h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.shape-option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.shape-option:hover, .shape-option.selected {
+    background-color: #ddd;
+}
+
+#game-over-popup {
+    display: none; /* Initially hidden */
+}
+
+#options-popup button, #game-over-popup button, #reset-options {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#options-popup button:hover, #game-over-popup button:hover, #reset-options:hover {
+    background-color: #3e8e41;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    z-index: 100;
+}

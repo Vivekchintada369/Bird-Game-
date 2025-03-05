@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="bird"></div>
+        <div id="score">
+            <span id="player-name-display">Player: Player</span><br>
+            Score: <span id="current-score">0</span>
+        </div>
+    </div>
+
+    <div id="options-popup">
+        <h2>Select Your Options:</h2>
+        <div id="shape-options">
+            <h3>Shapes:</h3>
+            <div class="shape-option" data-shape="circle">Circle</div>
+            <div class="shape-option" data-shape="square">Square</div>
+            <div class="shape-option" data-shape="triangle">Triangle</div>
+            <div class="shape-option" data-shape="rectangle">Rectangle</div>
+            <div class="shape-option" data-shape="oval">Oval</div>
+            <div class="shape-option" data-shape="car">Car</div>
+            <div class="shape-option" data-shape="bike">Bike</div>
+            <div class="shape-option" data-shape="plane">Plane</div>
+            <div class="shape-option" data-shape="train">Train</div>
+            <div class="shape-option" data-shape="star">Star</div>
+            <div class="shape-option" data-shape="tree">Tree</div>
+            <div class="shape-option" data-shape="helicopter">Helicopter</div>
+        </div>
+
+        <label for="player-name">Enter Your Name:</label>
+        <input type="text" id="player-name" value="Player">
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <div id="game-over-popup">
+        <h2>Game Over!</h2>
+        <p id="final-score"></p>
+        <p id="high-score-display"></p>
+        <button id="restart-game">Restart Game</button>
+        <button id="reset-options">Reset Options</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
